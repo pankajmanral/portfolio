@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+nav{
+    /* background: red; */
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 12rem;
+    /* position: fixed; */
+}
+nav ul{
+    display: flex;
+    gap: 40px;
+    margin-left: 35rem;
+}
+nav ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background: black;
+    height: 1px;
+    transition: all ease 1s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav h1{
+    font-weight: 400;
+    white-space: nowrap;
+    font-size: 1.7rem;
+    position: relative;
+    cursor: pointer;
+}
+nav h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background: black;
+    height: 2px;
+    transition: all ease 1s;
+}
+nav h1:hover::after{
+    width: 100%;
+}
+#page1{
+    height: calc(100vh - 70px);
+    width: 100vw;
+    /* background: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.photo{
+    height: 80vh;
+    width: 30vw;
+    /* background: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 4.5rem; */
+}
+.photo img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+.text{
+    height: 80vh;
+    width: 30vw;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 4.5rem; */
+}
+.text h4{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.text h1{
+    font-size: 3.7rem;
+    font-weight: 500;
+    word-spacing: -10px;
+}
+.text h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.text button{
+    background: none;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* .btns button:hover{
+    transform: translateY(2px);
+} */
+.btns button:nth-child(1):hover{
+    background-color: black;
+    color: white;
+}
+.btns button:nth-child(2){
+    background: black;
+    color: white;
+}
+.btns button:nth-child(2):hover{
+    background-color: white;
+    color: black;
+}
+.socialMedia{
+    margin-top: 10px;
+}
+.socialMedia i{
+    font-size: 2rem;
+}
+.socialMedia:hover{
+    cursor: pointer;
+}
+
+
+
+#page2{
+    height: 100vh;
+    width: 100vw;
+    /* background: red; */
+    padding-top: 10px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about h5{
+    font-weight: 200;
+}
+.about h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.image{
+    height: 28rem;
+    width: 25rem;
+    background: red;
+    position: relative;
+    top: 15%;
+    left: 10%;
+    background-image: url("./IMG_20240509_142514_119.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+}
+.container{
+    /* background: red; */
+    height: 24rem;
+    width: 50rem;
+    position: relative;
+    top: -35%;
+    left: 40%;
+}
+.box{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 5px;
+}
+.box1{
+    height: 10rem;
+    width: 24rem;
+    /* background: blue; */
+    border-radius: 30px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box1 i{
+    font-size: 2rem;
+}
+.box1 h5{
+    font-weight: 400;
+}
+.aboutme{
+    position: relative;
+    top: 20px;
+}
+.aboutme h5{
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+
+#page3{
+    height: 100vh;
+    width: 100vw;
+    /* background: red; */
+    padding: 10px;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skills h5{
+    font-weight: 200;
+}
+.skills h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.boxes{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    top: 15%;
+}
+.boxes .box2{
+    height: 25rem;
+    width: 35rem;
+    /* background: red; */
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 30px;
+}
+.box2 h3{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.box3{
+    display: flex;
+    gap: 120px;
+    /* padding: 20px 100px; */
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.box4{
+    height: 18rem;
+    width: 8rem;
+    /* background: red; */
+    /* margin-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.box5{
+    height: 6rem;
+    width: 8rem;
+    /* background: blue; */
+    display: flex;
+    gap: 15px;
+}
+.box5 i{    
+    font-size: 1.5rem;
+}
+
+
+#page4{
+    height: 100vh;
+    width: 100vw;
+    /* background: red; */
+    padding: 10px;
+}
+.projects{
+    height: 80vh;
+    width: 200vh;
+    /* background: red; */
+    position: relative;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.projects .project{
+    height: 65vh;
+    width: 55vh;
+    background: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.project .img1{
+    height: 45vh;
+    width: 45vh;
+    border-radius: 30px;
+    background-image: url("./Screenshot\ \(4\).png");
+    background-position: center;
+    background-size: cover;
+    border: none;
+}
+.project h3{
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-top: 15px;
+}
+.project button{
+    padding: 10px;
+    border-radius: 30px;
+    width: 100px;
+    border: 1px solid black;
+    margin-top: 10px;
+    background: transparent;
+    text-align: center;
+}
+.project button a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+.project .img2{
+    height: 45vh;
+    width: 45vh;
+    border-radius: 30px;
+    background-image: url("./Screenshot\ \(8\).png");
+    background-position: center;
+    background-size: cover;
+    border: none;
+}
+.project .img3{
+    height: 45vh;
+    width: 45vh;
+    border-radius: 30px;
+    background-image: url("./Screenshot\ \(7\).png");
+    background-position: center;
+    background-size: cover;
+    border: none;
+}
+
+
+#page5{
+    height: 100vh;
+    width: 100vw;
+    /* background: red; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactme{
+    /* background: blue; */
+    position: relative;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#page5 h5{
+    font-weight: 200;
+}
+#page5 h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.mail{
+    background: rgba(189, 189, 189, 0.164);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    gap: 30px;
+    margin-top: 40px;
+}
+.mail i{
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+.footer{
+    /* background: blue; */
+    position: relative;
+    top: 15%;
+}
+.footer ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    position: relative;
+    margin-top: 250px;
+}
+.footer ul li{
+    list-style: none;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 1.5rem;
+}
+.footer ul li a::after{
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: black;
+    height: 1px;
+    position: absolute;
+    transition: all ease 1s;
+}
+.footer ul li a:hover::after{
+    width: 100%;
+}
