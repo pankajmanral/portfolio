@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@latest/dist/lenis.min.js"></script>
+    <title>Personal Portfolio</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+        font-family: "Raleway", sans-serif;
+        /* scroll-behavior: smooth; */
+    }
+    .touch{
+        font-family: "Oswald", sans-serif;
+    }
+</style>
+
+<body>
+
+    <!-- navbar -->
+    <div class="fixed inset-0 bg-red-900 h-10">
+        <!-- navbar for device upto tablet -->
+        <nav class="block lg:hidden bg-white">
+        <div id="unfold" class="h-15 w-full flex justify-between text-xl p-5">
+            <i class="ri-menu-unfold-line"></i>
+            <h1 id="username">Manral <span class="font-bold">Pankaj</span></h1>
+        </div>
+        <div id="fold" class="z-50 h-screen bg-white fixed inset-0 w-3/4 sm:w-1/2 transform -translate-x-full transition-transform duration-500 ease-in-out p-5 ">
+            <div class="flex justify-between text-xl">
+                <h1>Manral <span class="font-bold">Pankaj</span></h1>
+                <i class="ri-menu-fold-line"></i>
+            </div>
+            <div>
+                <ul class="mt-10 flex flex-col gap-5">
+                    <a href="#about"><li class="hover:font-semibold cursor-pointer">About</li></a>
+                    <a href="#skills"><li class="hover:font-semibold cursor-pointer">Skills</li></a>
+                    <a href="#projects"><li class="hover:font-semibold cursor-pointer">Projects</li></a>
+                    <a href="#contact"><li class="hover:font-semibold cursor-pointer">Contact</li></a>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        <!-- navbar for device above tablet -->
+        <nav class="h-20 w-full hidden lg:block text-xl bg-white">
+            <div class="h-full w-full flex justify-between p-5 items-center">
+                <div>
+                    <h1>Manral <span class="font-bold">Pankaj</span></h1>
+                </div>
+                <div>
+                    <ul class="flex gap-5">
+                        <a href="#about"><li class="hover:font-semibold cursor-pointer">About</li></a>
+                        <a href="#skills"><li class="hover:font-semibold cursor-pointer">Skills</li></a>
+                        <a href="#projects"><li class="hover:font-semibold cursor-pointer">Projects</li></a>
+                        <a href="#contact"><li class="hover:font-semibold cursor-pointer">Contact</li></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- about page -->
+    <div id="about" class="h-[calc(100vh_-_5rem)] grid grid-cols-1 grid-row-2 lg:grid-row-1 lg:grid-cols-2">
+        <div class="flex flex-col justify-center items-center mt-10 md:mt-0">
+            <div>
+                <img class="h-44 w-44 sm:h-[28rem] sm:w-96 bg-center bg-cover rounded-full sm:rounded-3xl border border-black border-dotted p-1" src="./static/img/personal.jpg" alt="">
+            </div>
+            <div class="flex flex-col items-center mt-3 sm:hidden">
+                <h1>Hello I'm Manral <span class="font-bold">Pankaj</span></h1>
+                <h1>A full stack developer</h1>
+            </div>
+            <div class="flex gap-1 mt-3 sm:hidden">
+                <a href="https://www.linkedin.com/in/pankaj-manral-028190251/"><button class="h-8 rounded-md px-2 text-sm bg-gray-500 text-white">View Linkedin</button></a>
+                <a href="https://github.com/pankajmanral"><button class="h-8 rounded-md px-2 text-sm bg-gray-500 text-white">View GitHub</button></a>
+            </div>
+        </div>
+        <div class="p-5 flex items-start sm:justify-start lg:justify-center landscape:items-center sm:flex-col gap-3 sm:items-center">
+            <div class="hidden items-center mt-3 sm:flex sm:flex-col text-2xl lg:text-3xl mb-2">
+                <h1>Hello I'm Manral <span class="font-bold">Pankaj</span></h1>
+                <h1>A full stack developer</h1>
+            </div>
+            <div class="text-center sm:w-3/4 lg:w-full">
+                <p>I am a dedicated <span class="font-bold">Full Stack Developer</span> with a passion for creating seamless and efficient web Tailwind CSS,applications. With expertise in front-end technologies like <span class="font-bold">React</span> and paired with back-end skills in Node.js, Express, and <span class="font-bold">Django</span> , I build dynamic, user-focused solutions from concept to deployment. My experience includes working with databases like MongoDB and MySQL. I am committed to clean, maintainable code and continually refining my skills to keep up with the latest in web development trends.</p>
+            </div>
+            <div class="hidden gap-2 mt-3 md:flex ">
+                <a href="https://www.linkedin.com/in/pankaj-manral-028190251/"><button class="bg-gray-500 h-12 rounded-md px-2 text-xl text-white cursor-pointer">View Linkedin</button></a>
+                <a href="https://github.com/pankajmanral"><button class="bg-gray-500 h-12 rounded-md px-2 text-xl text-white cursor-pointer">View GitHub</button></a>
+            </div>
+        </div>
+    </div>  
+
+    <!-- skills -->
+    <div id="skills" class="h-[100vh] sm:h-screen w-full p-5 flex flex-col items-start justify-start md:items-center md:justify-center gap-5 text-white">
+        <h1 class="text-3xl mb-5 text-center mt-16">Explore my <span class="font-bold">skills</span></h1>
+        <div class="h-96 w-[50vw] grid grid-cols-1 grid-row-2 md:grid-cols-2 md:grid-row-1">
+            <div class="p-5 h-96 flex flex-col w-96">
+                <p class="text-centerx md:text-left mb-2"><span class="font-bold">FrontEnd</span> Skills</p>
+                <div class="h-[29rem] grid grid-cols-2 grid-row-1">
+                    <div class="p-3 h-80">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>HTML</h4>
+                                    <h5>Experienced</h5>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>CSS</h4>
+                                    <h5>Experienced</h5>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>Javascript</h4>
+                                    <h5>Experienced</h5>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>React</h4>
+                                    <h5>Intermediate</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 h-80">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>Tailwind CSS</h4>
+                                    <h5>Experienced</h5>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>GreenStock</h4>
+                                    <h5>Experienced</h5>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>BootStrap</h4>
+                                    <h5>Experienced</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-5 h-96 md:border-l flex flex-col w-96">
+                <p class="text-left mb-2"><span class="font-bold">BackEnd </span>Skills</p>
+                <div class="h-[29rem] grid grid-cols-2 grid-row-1">
+                    <div class=" p-3 h-80">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>MongoDB</h4>
+                                    <h5>Noivce</h5>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>MariaDB</h4>
+                                    <h5>Experienced</h5>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="p-3 h-80">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex gap-2">
+                                <div><i class="ri-verified-badge-fill"></i></div>
+                                <div class='skillName'>
+                                    <h4>Django</h4>
+                                    <h5>Experienced</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="w-[100vw] md:h-screen md:w-[200vw] flex flex-col md:flex-row bg-[#7363FF]">
+        <div class="h-[50vh] md:h-[100vh] w-[100vw] p-5">
+            <div class="h-screen flex justify-center items-center">
+                <h1 class="text-[4rem] touch -mt-[25rem] md:mt-0">Explore my <span class="font-bold text-white">projects</span></h1>
+            </div>
+        </div>
+        <div class="w-[100vw] p-0 md:p-32 flex justify-center md:justify-between items-center gap-5 flex-wrap pb-10">
+            <div class="h-[17rem] w-[20rem] md:h-[20rem] md:w-[25rem] border border-gray rounded-3xl p-5 bg-[#8c80f9]">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-black"><span class="font-bold">Apple Vision</span> website clone</h1>
+                    <div class="bg-gray-100 rounded-3xl px-3 md:px-5">
+                        <a href="https://pankajmanral.github.io/applevisionclone/"><i class="ri-arrow-right-up-line text-2xl cursor-pointer"></i></a>
+                    </div>
+                </div>
+                <p class="text-black">Subtle but sleeky webiste <span class="font-bold">animations</span></p>
+                <div class="h-32 md:h-52 mt-2">
+                    <img class="h-full w-full bg-center bg-cover rounded-3xl" src="./static/img/Screenshot (4).png" alt="">
+                </div>
+            </div>
+            <div class="h-[17rem] w-[20rem] md:h-[20rem] md:w-[25rem] border border-gray rounded-3xl p-5 bg-[#8c80f9]">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-black"><span class="font-bold">TVFlix</span></h1>
+                    <div class="bg-gray-100 rounded-3xl px-3 md:px-5">
+                        <a href="https://pankajmanral.github.io/TvFlix"><i class="ri-arrow-right-up-line text-2xl cursor-pointer"></i></a>
+                    </div>
+                </div>
+                <p class="text-black">Get <span class="font-bold">information</span> about all your fav movies</p>
+                <div class="h-32 md:h-52 mt-2">
+                    <img class="h-full w-full bg-center bg-cover rounded-3xl" src="./static/img/Screenshot 2024-11-11 134607.png" alt="">
+                </div>
+            </div>
+            <div class="h-[17rem] w-[20rem] md:h-[20rem] md:w-[25rem] border border-gray rounded-3xl p-5 bg-[#8c80f9]">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-black"><span class="font-bold">Responsive</span> Webpage</h1>
+                    <div class="bg-gray-100 rounded-3xl px-3 md:px-5">
+                        <a href="https://pankajmanral.github.io/IBS/"><i class="ri-arrow-right-up-line text-2xl cursor-pointer"></i></a>
+                    </div>
+                </div>
+                <p class="text-black">Fully <span class="font-bold">responsible</span> website</p>
+                <div class="h-32 md:h-52 mt-2">
+                    <img class="h-full w-full bg-center bg-cover rounded-3xl" src="./static/img/Screenshot 2024-11-14 202321.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="h-[100vh] md:h-screen grid grid-cols-1 grid-row-2 md:grid-cols-2 md:grid-row-1 md:bg-none">
+        <div class="flex justify-center items-center p-20">
+            <img src="./static/img/undraw_contact_us_re_4qqt.svg" alt="">
+        </div>
+        <div class="flex flex-col justify-center items-center p-20 rounded-b-md -mt-32 md:mt-0">
+            <h1 class="touch text-[3rem] md:text-[5rem] font-bold leading-tight text-white -mt-32">Get in touch <br> with <span class="text-black">me</span></h1>
+            <h1 class="text-white">Contact me on my <span class="text-black">mail</span> or send a request on <span class="text-black">Linkedin</span></h1>
+            <div>
+                <a href="https://mail.google.com/mail/u/1/#inbox?compose=VpCqJVFFvcGRHwfrQTfLFQdcGxXRZSCFCNKdXXbQdlllwmWsPPCpHnhCjQSZBXHQfwcghGB"><button class="px-3 py-2 mt-2 rounded-lg border border-white text-white cursor-pointer">Contact mail</button></a>
+                <a href="https://pancomp20.hackerresume.io/a37ae1dd-6e6c-48ae-b461-20c3f7a29449"><button class="px-3 py-2 mt-2 rounded-lg border border-white text-white cursor-pointer">View Resume</button></a>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>
+</body>
+</html>
